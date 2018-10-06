@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="파일 입출력
+
+라이브러리파일 입출력 라이브러리는 fstream이다.
+12#include &amp;lt;fstream&amp;gt;using namespace std;
+
+파일 열 때 공통 인자12345678ios::banary  2진모드로 파일열기(기본은 텍스트 모드)ios::app "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jeong UH"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="[c++][기본]파일입출력"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="파일 입출력
+
+라이브러리파일 입출력 라이브러리는 fstream이다.
+12#include &amp;lt;fstream&amp;gt;using namespace std;
+
+파일 열 때 공통 인자12345678ios::banary  2진모드로 파일열기(기본은 텍스트 모드)ios::app "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Jeong Note"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://jeong-uh.github.iohttps://github.com/Jeong-UH/hexo_Source/blob/master/image/bg_main.JPG?raw=true"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://jeong-uh.github.iohttps://github.com/Jeong-UH/hexo_Source/blob/master/image/bg_main.JPG?raw=true"/>
+    
+
+    <!-- Title -->
+    
+    <title>[c++][기본]파일입출력 - Jeong Note</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-125730700-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jeong Note</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/aboutme">
+                            
+                                About_Me
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/Jeong-UH/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('https://github.com/Jeong-UH/hexo_Source/blob/master/image/universe.jpg?raw=true')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>[c++][기본]파일입출력</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-10-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/c/">#c++</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/c/">c++</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>파일 입출력</p>
+</blockquote>
+<h3 id="라이브러리"><a href="#라이브러리" class="headerlink" title="라이브러리"></a>라이브러리</h3><p>파일 입출력 라이브러리는 fstream이다.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="파일-열-때-공통-인자"><a href="#파일-열-때-공통-인자" class="headerlink" title="파일 열 때 공통 인자"></a>파일 열 때 공통 인자</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ios::banary  2진모드로 파일열기(기본은 텍스트 모드)</span><br><span class="line">ios::app     파일의 끝에 추가한다</span><br><span class="line">ios::ate     처음엔 파일의 끝에 추가되지만 그다음부턴 현재 위치에 추가된다</span><br><span class="line">ios::in      읽기모드로 연다</span><br><span class="line">ios::out     쓰기모드로 연다</span><br><span class="line">ios::trunc   이미 파일이 있는경우 내용을 삭제한다</span><br><span class="line">ios::nocreate  파일이 없으면 에러를 발생시킨다</span><br><span class="line">ios::noreplace 파일이 있는경우 에러를 발생한다</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="파일을-열어서-읽기"><a href="#파일을-열어서-읽기" class="headerlink" title="파일을 열어서 읽기"></a>파일을 열어서 읽기</h3><p>파일을 열어서 읽을 때는 ifstream타입으로 선언한다.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"C:\\Users\\Desktop\\test.txt"</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>또는<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifstream in;</span><br><span class="line">in.open(<span class="string">"C:\\Users\\Desktop\\test.txt"</span>,ios::in); <span class="comment">//ios::in은 선택사항</span></span><br></pre></td></tr></table></figure></p>
+<p>“&gt;&gt;”을 사용해서 열려진 파일에서 값 읽기<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//문자열 읽기</span></span><br><span class="line"><span class="built_in">string</span> str;</span><br><span class="line">in &gt;&gt; str; <span class="comment">// 문자열을 띄어쓰기단위로 읽는다.</span></span><br><span class="line">           <span class="comment">// 띄어쓰기는 받지 않고 그 다음 문자열을 읽는다.</span></span><br><span class="line"><span class="comment">//문자읽기</span></span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line">in &gt;&gt; c;</span><br><span class="line"></span><br><span class="line"><span class="comment">//정수 읽기</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">in &gt;&gt; n;</span><br></pre></td></tr></table></figure></p>
+<p>ifstream의 메서드를 사용해서 값을 읽기<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//get과 getline</span></span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line">in.get(c); <span class="comment">// get은 문자하나를 읽으며 띄어쓰기도 한 문자로 인식</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span>* cp = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*<span class="number">100</span>);</span><br><span class="line">in.getline(cp,<span class="number">100</span>,<span class="string">'@'</span>); <span class="comment">// getline은 char*에 txt한줄 전체를 넣는다.</span></span><br><span class="line"><span class="comment">//이때, cp는 string은 안되고 꼭 할당하여 값을 넣어야 한다.</span></span><br><span class="line"><span class="comment">//공백도 모두 읽는다.</span></span><br><span class="line"><span class="comment">//100은 최대 사이즈를 입력하는 것이며 '@'는 이 문자를 만나면</span></span><br><span class="line"><span class="comment">//그만 읽어라라는 뜻이다. 효율은 그닥 좋지는 않다.</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h3 id="파일을-열어서-쓰기"><a href="#파일을-열어서-쓰기" class="headerlink" title="파일을 열어서 쓰기"></a>파일을 열어서 쓰기</h3><p>파일을 열어서 쓸 때는 ofstream타입으로 선언한다.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"C:\\Users\\Desktop\\test.txt"</span>)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>또는<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ofstream out;</span><br><span class="line">out.open(<span class="string">"C:\\Users\\Desktop\\test.txt"</span>, ios::out);</span><br></pre></td></tr></table></figure></p>
+<p>글을 쓸 때는 cout을 사용한다.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//문자열 입력</span></span><br><span class="line">out &lt;&lt; s;</span><br><span class="line"></span><br><span class="line"><span class="comment">//메서드 사용</span></span><br><span class="line">out.write(<span class="keyword">char</span>*,size);</span><br><span class="line">out.write(cp,<span class="number">100</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="공통-메서드"><a href="#공통-메서드" class="headerlink" title="공통 메서드"></a>공통 메서드</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.is_open() <span class="comment">// 파일이 제대로 열렸는지 확인</span></span><br><span class="line">.close()   <span class="comment">// 열려진 파일을 닫는다.</span></span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Jeong-UH/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Jeong UH<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
